@@ -1,0 +1,6 @@
+# files in which we don't want to implement prettier
+*.env
+.env
+/.vscode
+/node_modules
+./dist
