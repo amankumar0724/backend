@@ -5,7 +5,7 @@ import connectDB from './db/index.js'
 import { app } from './app.js'
 import dotenv from 'dotenv'
 dotenv.config({
-    path: './env'
+    path: './.env'
 })
 // first technique to connect to database: fir make function in db folder and then import here
 connectDB()
