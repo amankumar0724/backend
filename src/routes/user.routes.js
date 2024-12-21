@@ -25,10 +25,10 @@ router.route('/logout').post(verifyJWT,logoutUser)
 router.route('/refresh-token').post(refreshAccessToken)
 
 router.route('/change-password').post(verifyJWT,changeCurrentPassword)
-router.route('/get-current-user').post(verifyJWT,getCurrentUser)
-router.route('/update-account-details').post(verifyJWT,updateAccountDetails)
-router.route('/update-user-avatar').post(updateUserAvatar)//not working
-router.route('/update-user-cover-image').post(updateUserCoverImage)//not working
+router.route('/get-current-user').get(verifyJWT,getCurrentUser)
+router.route('/update-account-details').patch(verifyJWT,updateAccountDetails)
+router.route('/update-user-avatar').patch(verifyJWT,upload.single("avatar"),updateUserAvatar)//
+router.route('/update-user-cover-image').patch(verifyJWT,upload.single("coverImage"),updateUserCoverImage)
 
 
 
